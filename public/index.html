@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoert" content="width-device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="..\src\style.css">
+        <script src="..\src\index.js" type="text/javascript" defer></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+            rel="stylesheet">
+        <script src="https://kit.fontawesome.com/34227061f6.js"
+            crossorigin="anonymous"></script>
+
+        <title>Prueba Técnica Oxygen</title>
+    </head>
+    <body onload="showsave()">
+        <header>
+            <div class="web-header">
+                <i class="fas fa-exchange"></i>
+                <p>unit converter</p>
+            </div>
+        </header>
+        <main>
+            <article>
+                <div class="converter">
+                    <div>
+                        <p class="conv">convert</p>
+                    </div>
+                    <div class="inputs">
+                        <div class="select-container">
+                            <select id="unidad" onchange="unidades()">
+                                <option selected>km → miles</option>
+                                <option>miles → km</option>
+                                <option>feet → meters</option>
+                                <option>meters → feet</option>
+                                <option>inches → cm</option>
+                                <option>cm → inches</option>
+                            </select>
+                            <div class="change">
+                                <i onclick="swap()" class="fas fa-exchange"></i>
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <input type="number" id="num" oninput="calcular()">
+                            <p id="unit">km</p>
+                        </div>
+                    </div>
+                    <div class="result">
+                        <div>
+                            <p id="res"></p>
+                            <p id="uni"></p>
+                        </div>
+                    </div>
+                    <i id="heart" onclick="save()"
+                        class="fa-regular fa-heart"></i>
+                </div>
+            </article>
+            <article class="article2">
+                <div><p class="savetext">saved</p></div>
+            </article>
+            <article>
+                <div id="saved">
+
+                </div>
+            </article>
+            <footer>
+                <div>
+                    <a href>Terms of service</a>
+                    <a href>Privacy policy</a>
+                </div>
+            </footer>
+        </main>
+    </body>
+</html>
